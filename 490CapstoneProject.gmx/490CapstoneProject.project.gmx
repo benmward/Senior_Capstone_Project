@@ -10,6 +10,24 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="test">
+      <scripts name="create">
+        <script>scripts\scr_createtest.gml</script>
+      </scripts>
+      <scripts name="step">
+        <script>scripts\scr_steptest.gml</script>
+      </scripts>
+      <scripts name="outsideroom">
+        <script>scripts\scr_outsideroomtest.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="menu">
+      <scripts name="draw">
+        <script>scripts\scr_drawmenu.gml</script>
+      </scripts>
+    </scripts>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\ft_basic32</font>
     <font>fonts\ft_basic20</font>
