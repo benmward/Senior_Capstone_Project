@@ -10,6 +10,14 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\ft_basic32</font>
+    <font>fonts\ft_basic20</font>
+  </fonts>
+  <objects name="objects">
+    <object>objects\obj_test</object>
+    <object>objects\obj_menu_controller</object>
+  </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
   </rooms>

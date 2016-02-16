@@ -57,13 +57,13 @@
 						<p>Error - Update your browser.</p>
 					</canvas>
 				</div>
-				<script type="text/javascript" src="glyde/Glide.js?NFBBC=377782439"></script>
+				<script type="text/javascript" src="moneta/490CapstoneProject.js?DXAAC=2070777246"></script>
 
 				<!-- / PROJECT END -->
 				<!-- Copyright Signature -->
 				<script>
 					document.write("<p>A Senior Capstone Project by" +
-					 " <a href='http://www.benmward.com'>Benjamin M. Ward</a>  |  Created under: <a href='https://www.apache.org/licenses/LICENSE-2.0'>Apache 2.0 License</a></p>");
+					 " <a href='http://www.benmward.com'>Benjamin M. Ward</a>  |  Licensed under <a href='https://www.apache.org/licenses/LICENSE-2.0'>Apache 2.0 License</a></p>");
 				</script>
 			</div>
 		</section>
