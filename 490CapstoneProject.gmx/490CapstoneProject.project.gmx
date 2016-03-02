@@ -4,14 +4,70 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_basicattn</sound>
+    <sound>sound\snd_basicmem</sound>
+    <sound>sound\snd_boop</sound>
+    <sound>sound\snd_start</sound>
+    <sound>sound\snd_up</sound>
+    <sound>sound\snd_down</sound>
+    <sound>sound\snd_left</sound>
+    <sound>sound\snd_right</sound>
+    <sound>sound\snd_complete</sound>
+    <sound>sound\snd_thinking</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_test</sprite>
+    <sprite>sprites\spr_button</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_main</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="test">
+    <scripts name="general">
+      <script>scripts\scr_menureturn.gml</script>
+      <script>scripts\scr_playbgmusic.gml</script>
+      <script>scripts\scr_stopbgmusic.gml</script>
+      <script>scripts\scr_init.gml</script>
+    </scripts>
+    <scripts name="tests">
+      <scripts name="timeremaining">
+        <scripts name="step">
+          <script>scripts\scr_steptimeremain.gml</script>
+        </scripts>
+        <scripts name="draw">
+          <script>scripts\scr_drawtimeremain.gml</script>
+        </scripts>
+      </scripts>
+    </scripts>
+    <scripts name="menu">
+      <scripts name="draw">
+        <script>scripts\scr_drawmenu.gml</script>
+        <script>scripts\scr_drawscore.gml</script>
+      </scripts>
+      <scripts name="buttons">
+        <scripts name="membutt">
+          <script>scripts\scr_membutt.gml</script>
+        </scripts>
+        <scripts name="attnbutt">
+          <script>scripts\scr_attnbutt.gml</script>
+        </scripts>
+        <script>scripts\scr_buttonhover.gml</script>
+      </scripts>
+      <scripts name="countdown">
+        <scripts name="create">
+          <script>scripts\scr_createcountdown.gml</script>
+        </scripts>
+        <scripts name="draw">
+          <script>scripts\scr_drawcountdown.gml</script>
+        </scripts>
+        <scripts name="step">
+          <script>scripts\scr_stepcountdown.gml</script>
+        </scripts>
+      </scripts>
+    </scripts>
+    <scripts name="temp">
       <scripts name="create">
         <script>scripts\scr_createtest.gml</script>
       </scripts>
@@ -22,22 +78,42 @@
         <script>scripts\scr_outsideroomtest.gml</script>
       </scripts>
     </scripts>
-    <scripts name="menu">
-      <scripts name="draw">
-        <script>scripts\scr_drawmenu.gml</script>
-      </scripts>
-    </scripts>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\ft_basic32</font>
-    <font>fonts\ft_basic20</font>
+    <font>fonts\ft_fancy32</font>
+    <font>fonts\ft_basic22</font>
+    <font>fonts\ft_ready</font>
+    <font>fonts\ft_countdown</font>
+    <font>fonts\ft_basic16</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_test</object>
-    <object>objects\obj_menu_controller</object>
+    <objects name="global">
+      <object>objects\obj_globalcontrol</object>
+    </objects>
+    <objects name="menu">
+      <object>objects\obj_menu</object>
+      <object>objects\obj_countdown</object>
+      <objects name="buttons">
+        <object>objects\obj_attnbutt</object>
+        <object>objects\obj_membutt</object>
+      </objects>
+    </objects>
+    <objects name="temp">
+      <object>objects\obj_test</object>
+    </objects>
+    <objects name="basicattn">
+      <object>objects\obj_basicattn</object>
+    </objects>
+    <objects name="basicmem">
+      <object>objects\obj_basicmem</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
+    <rooms name="basictest">
+      <room>rooms\rm_basicmem</room>
+      <room>rooms\rm_basicattn</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
