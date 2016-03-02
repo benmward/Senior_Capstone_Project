@@ -26,13 +26,16 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="general">
+      <script>scripts\scr_init.gml</script>
       <script>scripts\scr_menureturn.gml</script>
       <script>scripts\scr_playbgmusic.gml</script>
       <script>scripts\scr_stopbgmusic.gml</script>
-      <script>scripts\scr_init.gml</script>
     </scripts>
     <scripts name="tests">
       <scripts name="timeremaining">
+        <scripts name="create">
+          <script>scripts\scr_createtimeremain.gml</script>
+        </scripts>
         <scripts name="step">
           <script>scripts\scr_steptimeremain.gml</script>
         </scripts>
@@ -40,11 +43,23 @@
           <script>scripts\scr_drawtimeremain.gml</script>
         </scripts>
       </scripts>
+      <scripts name="basicattn">
+        <scripts name="create">
+          <script>scripts\scr_createbasicattn.gml</script>
+        </scripts>
+        <scripts name="step">
+          <script>scripts\scr_stepbasicattn.gml</script>
+        </scripts>
+        <scripts name="draw">
+          <script>scripts\scr_drawbasicattn.gml</script>
+          <script>scripts\scr_drawattnscore.gml</script>
+        </scripts>
+      </scripts>
     </scripts>
     <scripts name="menu">
       <scripts name="draw">
         <script>scripts\scr_drawmenu.gml</script>
-        <script>scripts\scr_drawscore.gml</script>
+        <script>scripts\scr_drawprogress.gml</script>
       </scripts>
       <scripts name="buttons">
         <scripts name="membutt">
@@ -84,6 +99,7 @@
     <font>fonts\ft_basic22</font>
     <font>fonts\ft_ready</font>
     <font>fonts\ft_countdown</font>
+    <font>fonts\ft_attn</font>
     <font>fonts\ft_basic16</font>
   </fonts>
   <objects name="objects">
@@ -111,8 +127,8 @@
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
     <rooms name="basictest">
-      <room>rooms\rm_basicmem</room>
       <room>rooms\rm_basicattn</room>
+      <room>rooms\rm_basicmem</room>
     </rooms>
   </rooms>
   <help>
