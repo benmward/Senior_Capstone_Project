@@ -1,6 +1,6 @@
 // draws progress
 draw_set_halign(fa_left);
-draw_set_color(c_black);
+draw_set_color(c_white);
 draw_set_font(ft_basic22);
 draw_text(720,4,"Progress Report");
 draw_set_font(ft_basic16);

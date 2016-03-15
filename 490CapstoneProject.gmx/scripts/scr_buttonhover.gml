@@ -15,6 +15,36 @@ if position_meeting(mouse_x, mouse_y, self){
             audio_play_sound(snd_basicmem, 1, false);
             room_goto(rm_basicmem);
         }
+        
+        if (instance_position(mouse_x, mouse_y, obj_spatbutt)){
+            // audio_play_sound(snd_basicspat, 1, false);
+            room_goto(rm_basicspat);
+        }
+        
+        if (instance_position(mouse_x, mouse_y, obj_gameattnbutt)){
+            // audio_play_sound(snd_gameattn, 1, false);
+            room_goto(rm_gameattn);
+        }
+        
+        if (instance_position(mouse_x, mouse_y, obj_gamemembutt)){
+            // audio_play_sound(snd_gamemem, 1, false);
+            room_goto(rm_gamemem);
+        }
+        
+        if (instance_position(mouse_x, mouse_y, obj_progressbutt)){
+            // audio_play_sound(snd_progress, 1, false);
+            room_goto(rm_progress);
+        }
+        
+        if (instance_position(mouse_x, mouse_y, obj_custombutt)){
+            // audio_play_sound(snd_custom, 1, false);
+            room_goto(rm_custom);
+        }
+        
+        if (instance_position(mouse_x, mouse_y, obj_settingsbutt)){
+            // audio_play_sound(snd_settings, 1, false);
+            room_goto(rm_settings);
+        }
     }
 }
 else{

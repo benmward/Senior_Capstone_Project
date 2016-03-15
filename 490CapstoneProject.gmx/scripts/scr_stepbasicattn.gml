@@ -105,9 +105,9 @@ if (testtime <= 62 && testtime > 1){
     }
     
 }else{
-// Ensure testing is off
-worddisplay = false;
-bubble = true;
-answer = 0;
-spawn = 90;
+    // Ensure testing is off
+    worddisplay = false;
+    bubble = true;
+    answer = 0;
+    spawn = 90;
 }

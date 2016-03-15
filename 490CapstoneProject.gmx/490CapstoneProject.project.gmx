@@ -19,6 +19,12 @@
   <sprites name="sprites">
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_button</sprite>
+    <sprite>sprites\spr_but_small_green</sprite>
+    <sprite>sprites\spr_but_small_pink</sprite>
+    <sprite>sprites\spr_but_small_yellow</sprite>
+    <sprite>sprites\spr_but_small_orange</sprite>
+    <sprite>sprites\spr_but_small_blue</sprite>
+    <sprite>sprites\menu_sfx</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_main</background>
@@ -28,7 +34,8 @@
     <scripts name="general">
       <script>scripts\scr_init.gml</script>
       <script>scripts\scr_menureturn.gml</script>
-      <script>scripts\scr_playbgmusic.gml</script>
+      <script>scripts\scr_escape.gml</script>
+      <script>scripts\scr_startbgmusic.gml</script>
       <script>scripts\scr_stopbgmusic.gml</script>
     </scripts>
     <scripts name="tests">
@@ -57,18 +64,11 @@
       </scripts>
     </scripts>
     <scripts name="menu">
+      <script>scripts\scr_buttonhover.gml</script>
       <scripts name="draw">
         <script>scripts\scr_drawmenu.gml</script>
         <script>scripts\scr_drawprogress.gml</script>
-      </scripts>
-      <scripts name="buttons">
-        <scripts name="membutt">
-          <script>scripts\scr_membutt.gml</script>
-        </scripts>
-        <scripts name="attnbutt">
-          <script>scripts\scr_attnbutt.gml</script>
-        </scripts>
-        <script>scripts\scr_buttonhover.gml</script>
+        <script>scripts\scr_drawbuttons.gml</script>
       </scripts>
       <scripts name="countdown">
         <scripts name="create">
@@ -80,6 +80,13 @@
         <scripts name="step">
           <script>scripts\scr_stepcountdown.gml</script>
         </scripts>
+      </scripts>
+      <scripts name="sfx">
+        <script>scripts\scr_stepsfx.gml</script>
+        <script>scripts\scr_destroyself.gml</script>
+        <script>scripts\scr_createsfx.gml</script>
+        <script>scripts\scr_gensfx.gml</script>
+        <script>scripts\scr_sfxspawn.gml</script>
       </scripts>
     </scripts>
     <scripts name="temp">
@@ -96,11 +103,14 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\ft_fancy32</font>
+    <font>fonts\ft_italic24</font>
     <font>fonts\ft_basic22</font>
+    <font>fonts\ft_basic20</font>
+    <font>fonts\ft_basic18</font>
+    <font>fonts\ft_basic16</font>
     <font>fonts\ft_ready</font>
     <font>fonts\ft_countdown</font>
     <font>fonts\ft_attn</font>
-    <font>fonts\ft_basic16</font>
   </fonts>
   <objects name="objects">
     <objects name="global">
@@ -109,19 +119,34 @@
     <objects name="menu">
       <object>objects\obj_menu</object>
       <object>objects\obj_countdown</object>
+      <object>objects\obj_sfx</object>
       <objects name="buttons">
         <object>objects\obj_attnbutt</object>
         <object>objects\obj_membutt</object>
+        <object>objects\obj_spatbutt</object>
+        <object>objects\obj_gamemembutt</object>
+        <object>objects\obj_gameattnbutt</object>
+        <object>objects\obj_progressbutt</object>
+        <object>objects\obj_custombutt</object>
+        <object>objects\obj_settingsbutt</object>
       </objects>
     </objects>
     <objects name="temp">
       <object>objects\obj_test</object>
     </objects>
-    <objects name="basicattn">
+    <objects name="basictest">
       <object>objects\obj_basicattn</object>
-    </objects>
-    <objects name="basicmem">
       <object>objects\obj_basicmem</object>
+      <object>objects\obj_basicspat</object>
+    </objects>
+    <objects name="games">
+      <object>objects\obj_gameattn</object>
+      <object>objects\obj_gamemem</object>
+    </objects>
+    <objects name="other">
+      <object>objects\obj_progress</object>
+      <object>objects\obj_custom</object>
+      <object>objects\obj_settings</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -129,6 +154,16 @@
     <rooms name="basictest">
       <room>rooms\rm_basicattn</room>
       <room>rooms\rm_basicmem</room>
+      <room>rooms\rm_basicspat</room>
+    </rooms>
+    <rooms name="games">
+      <room>rooms\rm_gameattn</room>
+      <room>rooms\rm_gamemem</room>
+    </rooms>
+    <rooms name="other">
+      <room>rooms\rm_progress</room>
+      <room>rooms\rm_custom</room>
+      <room>rooms\rm_settings</room>
     </rooms>
   </rooms>
   <help>

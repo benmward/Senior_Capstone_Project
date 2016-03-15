@@ -29,6 +29,18 @@ if (countdown == 0){
     if (room == rm_basicmem){
            instance_create(0,0,obj_basicmem);
         }
+        
+    if (room == rm_basicspat){
+           instance_create(0,0,obj_basicspat);
+        }
+        
+    if (room == rm_gameattn){
+           instance_create(0,0,obj_gameattn);
+        }
+        
+    if (room == rm_gamemem){
+           instance_create(0,0,obj_gamemem);
+        }
     // And then delete this object
     instance_destroy();
 }
