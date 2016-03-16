@@ -13,8 +13,11 @@
     <sound>sound\snd_down</sound>
     <sound>sound\snd_left</sound>
     <sound>sound\snd_right</sound>
+    <sound>sound\snd_memorize</sound>
+    <sound>sound\snd_repeat</sound>
     <sound>sound\snd_complete</sound>
     <sound>sound\snd_thinking</sound>
+    <sound>sound\snd_entropy</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_test</sprite>
@@ -60,6 +63,18 @@
         <scripts name="draw">
           <script>scripts\scr_drawbasicattn.gml</script>
           <script>scripts\scr_drawattnscore.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="basicmem">
+        <scripts name="create">
+          <script>scripts\scr_createbasicmem.gml</script>
+        </scripts>
+        <scripts name="step">
+          <script>scripts\scr_stepbasicmem.gml</script>
+        </scripts>
+        <scripts name="draw">
+          <script>scripts\scr_drawbasicmem.gml</script>
+          <script>scripts\scr_drawmemscore.gml</script>
         </scripts>
       </scripts>
     </scripts>
@@ -111,6 +126,8 @@
     <font>fonts\ft_ready</font>
     <font>fonts\ft_countdown</font>
     <font>fonts\ft_attn</font>
+    <font>fonts\ft_mem</font>
+    <font>fonts\ft_memwrong</font>
   </fonts>
   <objects name="objects">
     <objects name="global">

@@ -1,5 +1,5 @@
 // First, wait 2 seconds (starts at 64 seconds), ignore last 1 sec
-if (testtime <= 62 && testtime > 1){
+if (testtime <= (totaltime - 2) && testtime > 1){
     // Constantly decrement spawn to continue generating new tests
     if (spawn > 0){
         spawn -= 1;

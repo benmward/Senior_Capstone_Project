@@ -1,2 +1,2 @@
 // to generate
-sfx = 0;
+sfx = 95;

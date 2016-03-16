@@ -7,3 +7,5 @@ global.user = "Jack Sparrow";
 
 // Score Vars
 global.attnscore = 0;
+global.memscore = 0;
+global.spatscore = 0;
