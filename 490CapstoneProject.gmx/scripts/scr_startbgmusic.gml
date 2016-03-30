@@ -6,7 +6,7 @@
         }
         
     if (room == rm_basicmem){
-           audio_play_sound(snd_entropy, 0, true);
+            audio_play_sound(snd_entropy, 0, true);
         }
         
     if (room == rm_basicspat){
@@ -14,7 +14,7 @@
         }
         
     if (room == rm_gameattn){
-           // audio_play_sound(snd_thinking, 0, true);
+            audio_play_sound(snd_rush, 0, true);
         }
         
     if (room == rm_gamemem){

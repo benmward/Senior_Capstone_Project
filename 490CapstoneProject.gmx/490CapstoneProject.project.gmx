@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snd_basicattn</sound>
+    <sound>sound\snd_attngame</sound>
     <sound>sound\snd_basicmem</sound>
     <sound>sound\snd_boop</sound>
     <sound>sound\snd_start</sound>
@@ -18,19 +19,41 @@
     <sound>sound\snd_complete</sound>
     <sound>sound\snd_thinking</sound>
     <sound>sound\snd_entropy</sound>
+    <sound>sound\snd_hype</sound>
+    <sound>sound\snd_rush</sound>
+    <sound>sound\snd_phonevib</sound>
+    <sound>sound\snd_phonering</sound>
+    <sound>sound\snd_deathwarn</sound>
+    <sound>sound\snd_gameover</sound>
+    <sound>sound\snd_diffuse</sound>
+    <sound>sound\snd_explosion</sound>
+    <sound>sound\snd_ouch</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_test</sprite>
-    <sprite>sprites\spr_button</sprite>
-    <sprite>sprites\spr_but_small_green</sprite>
-    <sprite>sprites\spr_but_small_pink</sprite>
-    <sprite>sprites\spr_but_small_yellow</sprite>
-    <sprite>sprites\spr_but_small_orange</sprite>
-    <sprite>sprites\spr_but_small_blue</sprite>
-    <sprite>sprites\menu_sfx</sprite>
+    <sprite>sprites\spr_grass</sprite>
+    <sprite>sprites\spr_ground</sprite>
+    <sprite>sprites\spr_cloud</sprite>
+    <sprite>sprites\spr_man</sprite>
+    <sprite>sprites\spr_deadman</sprite>
+    <sprite>sprites\spr_manl</sprite>
+    <sprite>sprites\spr_explode</sprite>
+    <sprite>sprites\spr_rock</sprite>
+    <sprite>sprites\spr_falling</sprite>
+    <sprites name="menu">
+      <sprite>sprites\spr_test</sprite>
+      <sprite>sprites\menu_sfx</sprite>
+      <sprite>sprites\spr_but_small_yellow</sprite>
+      <sprite>sprites\spr_but_small_orange</sprite>
+      <sprite>sprites\spr_but_small_blue</sprite>
+      <sprite>sprites\spr_but_small_pink</sprite>
+      <sprite>sprites\spr_but_small_green</sprite>
+      <sprite>sprites\spr_button</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_main</background>
+    <background>background\bg_test</background>
+    <background>background\bg_mem</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -40,6 +63,49 @@
       <script>scripts\scr_escape.gml</script>
       <script>scripts\scr_startbgmusic.gml</script>
       <script>scripts\scr_stopbgmusic.gml</script>
+    </scripts>
+    <scripts name="games">
+      <scripts name="attngame">
+        <scripts name="cloud">
+          <script>scripts\scr_stepcloud.gml</script>
+          <script>scripts\scr_createcloud.gml</script>
+        </scripts>
+        <scripts name="grass">
+          <script>scripts\scr_creategrass.gml</script>
+          <script>scripts\scr_stepgrass.gml</script>
+        </scripts>
+        <scripts name="create">
+          <script>scripts\scr_createattngame.gml</script>
+        </scripts>
+        <scripts name="step">
+          <script>scripts\scr_stepattngame.gml</script>
+        </scripts>
+        <scripts name="draw">
+          <script>scripts\scr_drawattngame.gml</script>
+          <script>scripts\scr_drawattngamescore.gml</script>
+        </scripts>
+        <scripts name="man">
+          <script>scripts\scr_createman.gml</script>
+          <script>scripts\scr_stepman.gml</script>
+          <script>scripts\scr_stepdeadman.gml</script>
+          <script>scripts\scr_createdeadman.gml</script>
+        </scripts>
+        <script>scripts\scr_phonesound.gml</script>
+        <script>scripts\scr_gameover.gml</script>
+        <scripts name="rock">
+          <script>scripts\scr_createrock.gml</script>
+          <script>scripts\scr_steprock.gml</script>
+          <script>scripts\scr_ouch.gml</script>
+        </scripts>
+        <scripts name="explode">
+          <script>scripts\scr_destexplode.gml</script>
+          <script>scripts\scr_createexplode.gml</script>
+        </scripts>
+        <scripts name="falling">
+          <script>scripts\scr_stepfalling.gml</script>
+          <script>scripts\scr_createfalling.gml</script>
+        </scripts>
+      </scripts>
     </scripts>
     <scripts name="tests">
       <scripts name="timeremaining">
@@ -157,8 +223,20 @@
       <object>objects\obj_basicspat</object>
     </objects>
     <objects name="games">
-      <object>objects\obj_gameattn</object>
-      <object>objects\obj_gamemem</object>
+      <objects name="game_attn">
+        <object>objects\obj_gameattn</object>
+        <object>objects\obj_grass</object>
+        <object>objects\obj_ground</object>
+        <object>objects\obj_cloud</object>
+        <object>objects\obj_man</object>
+        <object>objects\obj_deadman</object>
+        <object>objects\obj_rock</object>
+        <object>objects\obj_falling</object>
+        <object>objects\obj_explode</object>
+      </objects>
+      <objects name="game_mem">
+        <object>objects\obj_gamemem</object>
+      </objects>
     </objects>
     <objects name="other">
       <object>objects\obj_progress</object>

@@ -49,6 +49,6 @@ if (ansmode == 1 || dispmode == 1){
         draw_set_halign(fa_left);
         draw_set_colour(c_white);
         draw_set_font(ft_basic16);
-        draw_text(440, 128, "Time to View");
+        draw_text(452, 128, "Time to View");
     }
 }

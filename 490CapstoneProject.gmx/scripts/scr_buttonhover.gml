@@ -22,7 +22,7 @@ if position_meeting(mouse_x, mouse_y, self){
         }
         
         if (instance_position(mouse_x, mouse_y, obj_gameattnbutt)){
-            // audio_play_sound(snd_gameattn, 1, false);
+            audio_play_sound(snd_attngame, 1, false);
             room_goto(rm_gameattn);
         }
         
