@@ -16,7 +16,7 @@ if (testtime <= (totaltime - 2) && testtime > 1){
         // visual to show (up, down, left, right)
         vis_variant = irandom_range(1,4);
         // color of visual (green or red)
-        col_variant = irandom_range(1,5);
+        col_variant = irandom_range(1,4);
     
         // Set the value of the correct answer:
         // if green, go go with sound
