@@ -8,3 +8,8 @@ audio_stop_sound(snd_rush);
 audio_stop_sound(snd_phonevib);
 audio_stop_sound(snd_phonering);
 audio_stop_sound(snd_deathwarn);
+audio_stop_sound(snd_comingsoon);
+audio_stop_sound(snd_settings);
+audio_stop_sound(snd_progress);
+audio_stop_sound(snd_effon);
+audio_stop_sound(snd_effoff);

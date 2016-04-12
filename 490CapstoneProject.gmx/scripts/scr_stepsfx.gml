@@ -1,3 +1,8 @@
+// Check if sfx off
+if(global.togsfx == 0){
+    instance_destroy();
+}
+
 // Varience
 image_alpha = .4;
 vspeed -= (random_range(0.5, 0.8));

@@ -117,6 +117,26 @@ if (global.gameover == 0){
     if (gmovtimer >= 60){
         //reset
         global.gameover = 0;
+        
+        // Save the Attn game score
+        ini_open(string(global.userini));
+        // Get the previous number
+        global.attngamenumb = ini_read_real('ATTNGAME','NUMB',0);
+        // Increment by 1
+        global.attngamenumb = global.attngamenumb + 1;
+        // Write new number
+        ini_write_real('ATTNGAME','NUMB',global.attngamenumb);
+        // Write the score
+        ini_write_real('ATTNGAME',string(global.attngamenumb),(global.attngamescore));
+        // Get highscore
+        var hiattngame = ini_read_real('ATTNGAME','HIGHSCORE',0);
+        // If new score is higher, write new highscore
+        if(global.attngamescore > hiattngame){
+            ini_write_real('ATTNGAME','HIGHSCORE',(global.attngamescore));
+        }
+        // Close ini file
+        ini_close();
+        
         // Play game over sound
         audio_play_sound(snd_gameover, 1, false);
         // Return to menu

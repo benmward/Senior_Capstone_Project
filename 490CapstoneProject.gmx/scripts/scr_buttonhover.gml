@@ -17,8 +17,9 @@ if position_meeting(mouse_x, mouse_y, self){
         }
         
         if (instance_position(mouse_x, mouse_y, obj_spatbutt)){
+            audio_play_sound(snd_comingsoon, 1, false);
             // audio_play_sound(snd_basicspat, 1, false);
-            room_goto(rm_basicspat);
+            // room_goto(rm_basicspat);
         }
         
         if (instance_position(mouse_x, mouse_y, obj_gameattnbutt)){
@@ -27,23 +28,41 @@ if position_meeting(mouse_x, mouse_y, self){
         }
         
         if (instance_position(mouse_x, mouse_y, obj_gamemembutt)){
+            audio_play_sound(snd_comingsoon, 1, false);
             // audio_play_sound(snd_gamemem, 1, false);
-            room_goto(rm_gamemem);
+            // room_goto(rm_gamemem);
         }
         
         if (instance_position(mouse_x, mouse_y, obj_progressbutt)){
-            // audio_play_sound(snd_progress, 1, false);
+            audio_play_sound(snd_progress, 1, false);
             room_goto(rm_progress);
         }
         
         if (instance_position(mouse_x, mouse_y, obj_custombutt)){
+            audio_play_sound(snd_comingsoon, 1, false);
             // audio_play_sound(snd_custom, 1, false);
-            room_goto(rm_custom);
+            // room_goto(rm_custom);
         }
         
         if (instance_position(mouse_x, mouse_y, obj_settingsbutt)){
-            // audio_play_sound(snd_settings, 1, false);
+            audio_play_sound(snd_settings, 1, false);
             room_goto(rm_settings);
+        }
+        
+        if (instance_position(mouse_x, mouse_y, obj_backbutt)){
+            scr_stopbgmusic();
+            audio_play_sound(snd_mainmenu, 1, false);
+            room_goto(rm_menu);
+        }
+        
+        if (instance_position(mouse_x, mouse_y, obj_togsfxbutt)){
+            if(global.togsfx == 1){
+                audio_play_sound(snd_effoff, 1, false);
+                global.togsfx = 0;
+            }else{
+                audio_play_sound(snd_effon, 1, false);
+                global.togsfx = 1;
+            }
         }
     }
 }

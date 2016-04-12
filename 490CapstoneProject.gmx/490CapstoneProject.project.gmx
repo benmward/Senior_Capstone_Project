@@ -28,6 +28,12 @@
     <sound>sound\snd_diffuse</sound>
     <sound>sound\snd_explosion</sound>
     <sound>sound\snd_ouch</sound>
+    <sound>sound\snd_settings</sound>
+    <sound>sound\snd_progress</sound>
+    <sound>sound\snd_comingsoon</sound>
+    <sound>sound\snd_effon</sound>
+    <sound>sound\snd_effoff</sound>
+    <sound>sound\snd_mainmenu</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_grass</sprite>
@@ -41,6 +47,7 @@
     <sprite>sprites\spr_falling</sprite>
     <sprites name="menu">
       <sprite>sprites\spr_test</sprite>
+      <sprite>sprites\spr_comingsoon</sprite>
       <sprite>sprites\menu_sfx</sprite>
       <sprite>sprites\spr_but_small_yellow</sprite>
       <sprite>sprites\spr_but_small_orange</sprite>
@@ -144,12 +151,23 @@
         </scripts>
       </scripts>
     </scripts>
+    <scripts name="login">
+      <scripts name="create">
+        <script>scripts\scr_createlogin.gml</script>
+      </scripts>
+      <scripts name="step">
+        <script>scripts\scr_steplogin.gml</script>
+      </scripts>
+    </scripts>
     <scripts name="menu">
       <script>scripts\scr_buttonhover.gml</script>
+      <script>scripts\scr_coming_soon.gml</script>
       <scripts name="draw">
         <script>scripts\scr_drawmenu.gml</script>
         <script>scripts\scr_drawprogress.gml</script>
         <script>scripts\scr_drawbuttons.gml</script>
+        <script>scripts\scr_drawsettings.gml</script>
+        <script>scripts\scr_drawcustom.gml</script>
       </scripts>
       <scripts name="countdown">
         <scripts name="create">
@@ -199,6 +217,9 @@
     <objects name="global">
       <object>objects\obj_globalcontrol</object>
     </objects>
+    <objects name="login">
+      <object>objects\obj_login</object>
+    </objects>
     <objects name="menu">
       <object>objects\obj_menu</object>
       <object>objects\obj_countdown</object>
@@ -212,6 +233,9 @@
         <object>objects\obj_progressbutt</object>
         <object>objects\obj_custombutt</object>
         <object>objects\obj_settingsbutt</object>
+        <object>objects\obj_comingsoon</object>
+        <object>objects\obj_backbutt</object>
+        <object>objects\obj_togsfxbutt</object>
       </objects>
     </objects>
     <objects name="temp">
@@ -245,6 +269,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_login</room>
     <room>rooms\rm_menu</room>
     <rooms name="basictest">
       <room>rooms\rm_basicattn</room>
