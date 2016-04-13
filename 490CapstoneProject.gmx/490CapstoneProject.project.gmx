@@ -56,6 +56,8 @@
       <sprite>sprites\spr_but_small_green</sprite>
       <sprite>sprites\spr_button</sprite>
     </sprites>
+    <sprite>sprites\spr_div</sprite>
+    <sprite>sprites\spr_nameplate</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_main</background>
@@ -166,7 +168,6 @@
         <script>scripts\scr_drawmenu.gml</script>
         <script>scripts\scr_drawprogress.gml</script>
         <script>scripts\scr_drawbuttons.gml</script>
-        <script>scripts\scr_drawsettings.gml</script>
         <script>scripts\scr_drawcustom.gml</script>
       </scripts>
       <scripts name="countdown">
@@ -187,6 +188,12 @@
         <script>scripts\scr_gensfx.gml</script>
         <script>scripts\scr_sfxspawn.gml</script>
       </scripts>
+      <scripts name="settings">
+        <script>scripts\scr_drawsettings.gml</script>
+        <script>scripts\scr_stepsettings.gml</script>
+        <script>scripts\scr_rmend_settings.gml</script>
+        <script>scripts\scr_createsettings.gml</script>
+      </scripts>
     </scripts>
     <scripts name="temp">
       <scripts name="create">
@@ -202,6 +209,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\ft_fancy32</font>
+    <font>fonts\ft_b48</font>
     <font>fonts\ft_italic24</font>
     <font>fonts\ft_basic22</font>
     <font>fonts\ft_basic20</font>
@@ -237,6 +245,8 @@
         <object>objects\obj_backbutt</object>
         <object>objects\obj_togsfxbutt</object>
       </objects>
+      <object>objects\obj_div</object>
+      <object>objects\obj_nameplate</object>
     </objects>
     <objects name="temp">
       <object>objects\obj_test</object>

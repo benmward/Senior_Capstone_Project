@@ -1,2 +1,3 @@
 // to generate
-sfx = 95;
+sfx = 30;
+ticker = irandom_range(60, 170);

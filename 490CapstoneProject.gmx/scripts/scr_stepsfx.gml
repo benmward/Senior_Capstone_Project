@@ -4,7 +4,7 @@ if(global.togsfx == 0){
 }
 
 // Varience
-image_alpha = .4;
+image_alpha = .2;
 vspeed -= (random_range(0.5, 0.8));
 
 if (hspeed > 0 && hspeed < 8){

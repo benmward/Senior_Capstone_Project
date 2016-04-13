@@ -59,9 +59,17 @@ if position_meeting(mouse_x, mouse_y, self){
             if(global.togsfx == 1){
                 audio_play_sound(snd_effoff, 1, false);
                 global.togsfx = 0;
+                // Write settings to ini
+                ini_open("moneta_memory_suite_data.ini");
+                ini_write_real('SETTINGS','TOGSFX',0);
+                ini_close();
             }else{
                 audio_play_sound(snd_effon, 1, false);
                 global.togsfx = 1;
+                // Write settings to ini
+                ini_open("moneta_memory_suite_data.ini");
+                ini_write_real('SETTINGS','TOGSFX',1);
+                ini_close();
             }
         }
     }

@@ -8,7 +8,7 @@ draw_text(14,36,"Moneta Memory Suite");
 // Draw Welcome
 draw_set_color(c_navy);
 draw_set_font(ft_basic18);
-draw_text(32,90,"Welcome " + global.user + ".");
+draw_text(32,90,"Welcome " + string(global.user) + ".");
 draw_set_color(c_silver);
 draw_set_font(ft_basic16);
 draw_text(32,132,"Please make a selection...");
