@@ -25,6 +25,7 @@
     <sound>sound\snd_phonering</sound>
     <sound>sound\snd_deathwarn</sound>
     <sound>sound\snd_gameover</sound>
+    <sound>sound\snd_instructions</sound>
     <sound>sound\snd_diffuse</sound>
     <sound>sound\snd_explosion</sound>
     <sound>sound\snd_ouch</sound>
@@ -206,10 +207,16 @@
         <script>scripts\scr_outsideroomtest.gml</script>
       </scripts>
     </scripts>
+    <scripts name="instructions">
+      <script>scripts\scr_insattngame.gml</script>
+      <script>scripts\scr_insattntest.gml</script>
+      <script>scripts\scr_insmemtest.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ft_fancy32</font>
     <font>fonts\ft_b48</font>
+    <font>fonts\ft_b36</font>
     <font>fonts\ft_italic24</font>
     <font>fonts\ft_basic22</font>
     <font>fonts\ft_basic20</font>
@@ -277,6 +284,11 @@
       <object>objects\obj_custom</object>
       <object>objects\obj_settings</object>
     </objects>
+    <objects name="instructions">
+      <object>objects\obj_insattngame</object>
+      <object>objects\obj_insmemtest</object>
+      <object>objects\obj_insattntest</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_login</room>
@@ -294,6 +306,11 @@
       <room>rooms\rm_progress</room>
       <room>rooms\rm_custom</room>
       <room>rooms\rm_settings</room>
+    </rooms>
+    <rooms name="instructions">
+      <room>rooms\rm_insattngame</room>
+      <room>rooms\rm_insattntest</room>
+      <room>rooms\rm_insmemtest</room>
     </rooms>
   </rooms>
   <help>

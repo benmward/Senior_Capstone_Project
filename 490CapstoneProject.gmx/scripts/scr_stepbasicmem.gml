@@ -47,6 +47,8 @@ if(dispmode == 1){
 if(ansmode == 1){
 // Answer prompt
 
+    keyboard_string = string_letters(keyboard_string);
+
     if (done == 0){
         // If string is less than 8 characters
         if(string_length(keyboard_string) < 9){

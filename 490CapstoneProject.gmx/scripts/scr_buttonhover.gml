@@ -73,6 +73,26 @@ if position_meeting(mouse_x, mouse_y, self){
             }
         }
     }
+    // Instructions
+    if (mouse_check_button_pressed(mb_right)){
+        if (instance_position(mouse_x, mouse_y, obj_attnbutt)){
+            //instructions
+            audio_play_sound(snd_instructions, 1, false);
+            room_goto(rm_insattntest);
+        }
+        
+        if (instance_position(mouse_x, mouse_y, obj_membutt)){
+            //instructions
+            audio_play_sound(snd_instructions, 1, false);
+            room_goto(rm_insmemtest);
+        }
+        
+        if (instance_position(mouse_x, mouse_y, obj_gameattnbutt)){
+            // instructions
+            audio_play_sound(snd_instructions, 1, false);
+            room_goto(rm_insattngame);
+        }
+    }
 }
 else{
     image_alpha = 1;
